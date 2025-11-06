@@ -2,7 +2,6 @@ package org.example.todoappneuefische.service;
 
 import org.example.todoappneuefische.dto.ToDoDtoInput;
 import org.example.todoappneuefische.dto.ToDoDtoOutput;
-import org.example.todoappneuefische.enums.Status;
 import org.example.todoappneuefische.model.ToDo;
 import org.example.todoappneuefische.repository.ToDoRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +31,7 @@ public class ToDoService {
 
     public ToDo addToDo(ToDoDtoInput toDoDto) {
         ToDo newToDo = new ToDo(
-                IdService.generateRandomI(),
+                idService.generateRandomId(),
                 toDoDto.description(),
                 toDoDto.status()
         );
