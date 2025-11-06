@@ -50,6 +50,11 @@ public class ToDoService {
     }
 
     public void deleteToDoById(String id) {
+        /*
+         ToDo deletedTodo = repo.FindByID(id).orElseThrow();
+         toDoRepository.deleteById(id);
+         return deletedToDo;
+        */
         toDoRepository.deleteById(id);
     }
 }
